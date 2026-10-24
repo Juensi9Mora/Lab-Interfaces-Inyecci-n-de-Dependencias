@@ -1,9 +1,6 @@
 public interface EquipoCocina {
     void encender();
-
-    void apagar();
-
-    void preparar();
-
     void ajustarIntensidad();
+    void preparar();
+    void apagar();
 }
