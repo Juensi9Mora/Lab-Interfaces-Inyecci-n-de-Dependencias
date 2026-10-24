@@ -1,6 +1,6 @@
-public class Licuadora implements EquipoCocina {
-    private boolean encendida = false;
-    private int velocidad = 1;
+﻿public class Licuadora implements EquipoCocina {
+private boolean encendida = false;
+    private int intensidad = 5;
 
     @Override
     public void encender() {
@@ -17,15 +17,15 @@ public class Licuadora implements EquipoCocina {
     @Override
     public void preparar() {
         if (encendida) {
-            System.out.println("Licuando ingredientes a velocidad " + velocidad + ".");
+            System.out.println("Manejo de niveles de licuado " + intensidad + ".");
         }
     }
 
     @Override
     public void ajustarIntensidad() {
-        if (encendida && velocidad < 5) {
-            velocidad++;
-            System.out.println("Velocidad de la licuadora: " + velocidad);
+        if (encendida && intensidad < 10) {
+            intensidad++;
+            System.out.println("Intensidad de la Licuadora: " + intensidad);
         }
     }
 }

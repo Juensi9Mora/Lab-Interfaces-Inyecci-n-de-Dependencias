@@ -1,21 +1,30 @@
 public class Exprimidor implements EquipoCocina {
+    private boolean encendida = false;
+    private int intensidad = 2;
+
     @Override
     public void encender() {
+        encendida = true;
         System.out.println("Exprimidor encendido.");
     }
 
     @Override
-    public void ajustarIntensidad() {
-        System.out.println("Ajustando la intensidad del exprimidor...");
+    public void apagar() {
+        encendida = false;
+        System.out.println("Exprimidor apagado.");
     }
 
     @Override
     public void preparar() {
-        System.out.println("Exprimidor preparando jugo de naranja fresco.");
+        if (encendida) {
+            System.out.println("Exprimidor preparando jugo de naranja fresco.");
+        }
     }
 
     @Override
-    public void apagar() {
-        System.out.println("Exprimidor apagado.");
+    public void ajustarIntensidad() {
+        if (encendida) {
+            System.out.println("Ajustando la intensidad del exprimidor...");
+        }
     }
 }

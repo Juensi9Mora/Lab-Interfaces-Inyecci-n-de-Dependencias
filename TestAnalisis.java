@@ -1,5 +1,5 @@
 public class TestAnalisis {
-
+    
     static class PreparadorAcoplado {
         private Cafetera cafetera = new Cafetera();
         private Licuadora licuadora = new Licuadora();
