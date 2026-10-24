@@ -1,5 +1,5 @@
-﻿public class Exprimidor implements EquipoCocina {
-private boolean encendida = false;
+public class Exprimidor implements EquipoCocina {
+    private boolean encendida = false;
     private int intensidad = 2;
 
     @Override
@@ -17,15 +17,14 @@ private boolean encendida = false;
     @Override
     public void preparar() {
         if (encendida) {
-            System.out.println("Calibrar fuerza del Exprimidor " + intensidad + ".");
+            System.out.println("Exprimidor preparando jugo de naranja fresco.");
         }
     }
 
     @Override
     public void ajustarIntensidad() {
-        if (encendida && intensidad < 5) {
-            intensidad++;
-            System.out.println("Intensidad del Exprimidor: " + intensidad);
+        if (encendida) {
+            System.out.println("Ajustando la intensidad del exprimidor...");
         }
     }
 }

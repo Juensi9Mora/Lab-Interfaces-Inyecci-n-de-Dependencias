@@ -1,4 +1,4 @@
-public class Cafetera implements EquipoCocina {
+    public class Cafetera implements EquipoCocina {
     private boolean encendida = false;
     private int intensidad = 1;
 
